@@ -1,6 +1,5 @@
 ---
-title: "Untitled"
-author: "Parvathy"
+title: "R Evaluation"
 date: "6/15/2020"
 output: html_document
 ---
