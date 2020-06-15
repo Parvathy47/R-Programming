@@ -1,0 +1,41 @@
+---
+title: "R Evaluation"
+date: "06/16/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Time: 3 hours
+#### Max marks:100
+
+## [Google Play Store Apps](https://www.kaggle.com/lava18/google-play-store-apps?select=googleplaystore.csv)
+### Daily statistics for trending YouTube videos
+
+Download the data from:
+
+https://rawgit.com/Parvathy47/R-Programming/master/Exam/Q3.csv
+
+**Context**
+
+While many public datasets (on Kaggle and the like) provide Apple App Store data, there are not many counterpart datasets available for Google Play Store apps anywhere on the web. On digging deeper, I found out that iTunes App Store page deploys a nicely indexed appendix-like structure to allow for simple and easy web scraping. On the other hand, Google Play Store uses sophisticated modern-day techniques (like dynamic page load) using JQuery making scraping more challenging.
+
+
+**Content**
+
+Each app (row) has values for catergory, rating, size, and more.
+
+## Questions
+***Create an R Shiny App that contains the following features:***
+
+1.The app should have 2 tabs: Home and EDA. **[5]**
+
+2.In the home tab, you need to have 3 options: A general description of the data (available at the start of this file), sorting data and  category wise summarizations.The downloaded data contains a column called 'Genres' that must be split into 2 columns as GenrePrimary and GenreSecondary.  **[5]**
+
+3.In the sorting data option, the user can input values as 'top/bottom' using a radio button, rating values using a slider and a region name (include 'All') using a drop down. Based on the user input you will sort the data and display as a plain table.**[30]**
+
+4.In category wise summarizations, include a menu to select the category. Based on the category selected you have to display the mean values for the numeric columns selected. The columns are displayed as check box values.**[30]**
+
+5.In the EDA option, plot a boxplot for each catrgory's ratings and a bar plot for each GenreSecondary's count.**[30]**

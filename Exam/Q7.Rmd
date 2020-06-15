@@ -1,0 +1,55 @@
+---
+title: "R Evaluation"
+date: "06/16/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Time: 3 hours
+#### Max marks:100
+
+## [Pokemon with stats](https://www.kaggle.com/abcsds/pokemon)
+### 721 Pokemon with stats and types
+
+Download the data from:
+
+https://rawgit.com/Parvathy47/R-Programming/master/Exam/Q7.csv
+
+**Context**
+
+This data set includes 721 Pokemon, including their number, name, first and second type, and basic stats: HP, Attack, Defense, Special Attack, Special Defense, and Speed. It has been of great use when teaching statistics to kids. With certain types you can also give a geeky introduction to machine learning.
+
+This are the raw attributes that are used for calculating how much damage an attack will do in the games. This dataset is about the pokemon games (NOT pokemon cards or Pokemon Go).
+
+
+**Content**
+
+The data as described by Myles O'Neill is:
+
+* #: ID for each pokemon
+* Name: Name of each pokemon
+* Type 1: Each pokemon has a type, this determines weakness/resistance to attacks
+* Type 2: Some pokemon are dual type and have 2
+* Total: sum of all stats that come after this, a general guide to how strong a pokemon is
+* HP: hit points, or health, defines how much damage a pokemon can withstand before fainting
+* Attack: the base modifier for normal attacks (eg. Scratch, Punch)
+* Defense: the base damage resistance against normal attacks
+* SP Atk: special attack, the base modifier for special attacks (e.g. fire blast, bubble beam)
+* SP Def: the base damage resistance against special attacks
+* Speed: determines which pokemon attacks first each round
+
+## Questions
+***Create an R Shiny App that contains the following features:***
+
+1.The app should have 2 tabs: Home and EDA. **[5]**
+
+2.In the home tab, you need to have 3 options: A general description of the data (available at the start of this file), sorting data and  type 1 wise summarizations.**[5]**
+
+3.In the sorting data option, the user can input values as 'top/bottom' using a radio button, total values using a slider and a type (include 'All') using a drop down. Based on the user input you will sort the data and display as a plain table.**[30]**
+
+4.In type wise summarizations, include a menu to select the platform. Based on the platform selected you have to display the min, max and mean values for the numeric columns selected and mode values for the type and genration. The columns are displayed as check box values.**[30]**
+
+5.In the EDA option, plot a boxplot for each type's total strength, a bar chart showing mean attach, defense ans speed for each type and a histogram of type1 for only those pokemon who are not dual type.**[30]**

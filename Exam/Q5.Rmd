@@ -1,0 +1,47 @@
+---
+title: "R Evaluation"
+date: "06/16/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Time: 3 hours
+#### Max marks:100
+
+## [FIFA 18 Complete Player Dataset](https://www.kaggle.com/thec03u5/fifa-18-demo-player-dataset?select=PlayerPersonalData.csv)
+### 17k+ players, 70+ attributes extracted from the latest edition of FIFA
+
+Download the data from:
+
+https://rawgit.com/Parvathy47/R-Programming/master/Exam/Q5.csv
+
+**Context**
+
+Dataset for people who love data science and have grown up playing FIFA.
+
+
+**Content**
+
+* Every player featuring in FIFA 18
+* 70+ attributes
+* Player and Flag Images
+* Playing Position Data
+* Attributes based on actual data of the latest EA's FIFA 18 game
+* Attributes include on all player style statistics like Dribbling, Aggression, GK Skills etc.
+* Player personal data like Nationality, Photo, Club, Age, Wage, Salary etc.
+
+## Questions
+***Create an R Shiny App that contains the following features:***
+
+1.The app should have 2 tabs: Home and EDA. **[5]**
+
+2.In the home tab, you need to have 3 options: A general description of the data (available at the start of this file), sorting data and  club wise summarizations.You have to create an additional boolean column in the dataset, that holds true if player name is shortened (like L. Messi or L. Suarez) and false otherwise**[15]**
+
+3.In the sorting data option, the user can input values as 'top/bottom' using a radio button, price values using a slider and a nationality (include 'All') using a drop down. Based on the user input you will sort the data and display as a plain table.**[30]**
+
+4.In club wise summarizations, include a menu to select the club. Based on the club selected you have to display the min, max and mean values for the numeric columns selected and mode values for the nationality. The columns are displayed as check box values.**[30]**
+
+5.In the EDA option, plot a boxplot for each club's player wages and a histogram of nationality.**[20]**

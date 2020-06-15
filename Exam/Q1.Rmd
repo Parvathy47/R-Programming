@@ -1,6 +1,6 @@
 ---
 title: "R Evaluation"
-date: "6/15/2020"
+date: "06/16/2020"
 output: html_document
 ---
 
@@ -8,22 +8,82 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+#### Time: 3 hours
+#### Max marks:100
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## [World Happiness Report](https://www.kaggle.com/unsdsn/world-happiness?select=2015.csv)
+### Happiness scored according to economic production, social support, etc.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Download the data from https://rawgit.com/Parvathy47/R-Programming/master/Exam/Q1.csv
 
-```{r cars}
-summary(cars)
-```
+**Context**
 
-## Including Plots
+The World Happiness Report is a landmark survey of the state of global happiness. The first report was published in 2012, the 
+second in 2013, the third in 2015, and the fourth in the 2016 Update. The World Happiness 2017, which ranks 155 countries by their 
+happiness levels, was released at the United Nations at an event celebrating International Day of Happiness on March 20th. The 
+report continues to gain global recognition as governments, organizations and civil society increasingly use happiness indicators 
+to inform their policy-making decisions. Leading experts across fields – economics, psychology, survey analysis, national statistics,
+ health, public policy and more – describe how measurements of well-being can be used effectively to assess the progress of nations.
+ The reports review the state of happiness in the world today and show how the new science of happiness explains personal and 
+national variations in happiness.
 
-You can also embed plots, for example:
+**Content**
 
-```{r pressure, echo=FALSE}
-plot(cars)
-```
+The happiness scores and rankings use data from the Gallup World Poll. The scores are based on answers to the main life evaluation 
+question asked in the poll. This question, known as the Cantril ladder, asks respondents to think of a ladder with the best possible 
+life for them being a 10 and the worst possible life being a 0 and to rate their own current lives on that scale. The scores are 
+from nationally representative samples for the years 2013-2016 and use the Gallup weights to make the estimates representative. 
+The columns following the happiness score estimate the extent to which each of six factors – economic production, social support, 
+life expectancy, freedom, absence of corruption, and generosity – contribute to making life evaluations higher in each country than 
+they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six 
+factors. They have no impact on the total score reported for each country, but they do explain why some countries rank higher than 
+others.
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+**Inspiration**
+
+What countries or regions rank the highest in overall happiness and each of the six factors contributing to happiness? How did 
+country ranks or scores change between the 2015 and 2016 as well as the 2016 and 2017 reports? Did any country experience a 
+significant increase or decrease in happiness?
+
+**What is Dystopia?**
+
+Dystopia is an imaginary country that has the world’s least-happy people. The purpose in establishing Dystopia is to have a 
+benchmark against which all countries can be favorably compared (no country performs more poorly than Dystopia) in terms of each of 
+the six key variables, thus allowing each sub-bar to be of positive width. The lowest scores observed for the six key variables, 
+therefore, characterize Dystopia. Since life would be very unpleasant in a country with the world’s lowest incomes, lowest life 
+expectancy, lowest generosity, most corruption, least freedom and least social support, it is referred to as “Dystopia,” in contrast 
+to Utopia.
+
+**What are the residuals?**
+
+The residuals, or unexplained components, differ for each country, reflecting the extent to which the six variables either over- or 
+under-explain average 2014-2016 life evaluations. These residuals have an average value of approximately zero over the whole set of 
+countries. Figure 2.2 shows the average residual for each country when the equation in Table 2.1 is applied to average 2014- 2016 
+data for the six variables in that country. We combine these residuals with the estimate for life evaluations in Dystopia so that 
+the combined bar will always have positive values. As can be seen in Figure 2.2, although some life evaluation residuals are quite 
+large, occasionally exceeding one point on the scale from 0 to 10, they are always much smaller than the calculated value in 
+Dystopia, where the average life is rated at 1.85 on the 0 to 10 scale.
+
+**What do the columns succeeding the Happiness Score(like Family, Generosity, etc.) describe?**
+
+The following columns: GDP per Capita, Family, Life Expectancy, Freedom, Generosity, Trust Government Corruption describe the 
+extent to which these factors contribute in evaluating the happiness in each country.
+The Dystopia Residual metric actually is the Dystopia Happiness Score(1.85) + the Residual value or the unexplained value for each 
+country as stated in the previous answer.
+
+
+If you add all these factors up, you get the happiness score so it might be un-reliable to model them to predict Happiness Scores.
+
+
+## Questions
+***Create an R Shiny App that contains the following features:***
+
+1.The app should have 2 tabs: Home and EDA. **[5]**
+
+2.In the home tab, you need to have 3 options: A general description of the data (available at the start of this file), sorting data and region-wise summarizations. **[5]**
+
+3.In the sorting data option, the user can input values as 'top/bottom' using a radio button, score values using a slider and a region name (include 'All') using a drop down. Based on the user input you will sort the data and display as a plain table.**[30]**
+
+4.In region wise summarizations, include a menu to select the region. Based on the region selected you have to display the mean values for the numeric columns selected. The columns are displayed as check box values.**[30]**
+
+5.In the EDA option, include menu for country wise and region wise. In country wise option, you have a geomap whose color gradient is decided by the column chosen by the user using radio buttons. In region wise, plot a boxplot for each regions happiness score and a bar plot for each region's life expectancy.**[30]**

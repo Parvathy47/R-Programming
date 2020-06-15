@@ -1,0 +1,53 @@
+---
+title: "R Evaluation"
+date: "06/16/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Time: 3 hours
+#### Max marks:100
+
+## [120 years of Olympic history: athletes and results
+](https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results)
+### basic bio data on athletes and medal results from Athens 1896 to Rio 2016
+
+Download the data from:
+
+https://rawgit.com/Parvathy47/R-Programming/master/Exam/Q10.csv
+
+**Context**
+
+This is a historical dataset on the modern Olympic Games, including all the Games from Athens 1896 to Rio 2016. I scraped this data from www.sports-reference.com in May 2018. The R code I used to scrape and wrangle the data is on GitHub. I recommend checking my kernel before starting your own analysis.
+
+Note that the Winter and Summer Games were held in the same year up until 1992. After that, they staggered them such that Winter Games occur on a four year cycle starting with 1994, then Summer in 1996, then Winter in 1998, and so on. A common mistake people make when analyzing this data is to assume that the Summer and Winter Games have always been staggered.
+
+**Content**
+The file athlete_events.csv contains 271116 rows and 15 columns. Each row corresponds to an individual athlete competing in an individual Olympic event (athlete-events). The columns are:
+
+
+* Name - Athlete's name
+* Sex - M or F
+* Age - Integer
+* Team - Team name
+* Games - Year and season
+* City - Host city
+* Sport - Sport
+* Event - Event
+* Medal - Gold, Silver, Bronze, or NA
+
+## Questions
+***Create an R Shiny App that contains the following features:***
+
+1.The app should have 2 tabs: Home and EDA. **[5]**
+
+2.In the home tab, you need to have 3 options: A general description of the data (available at the start of this file), sorting data and  sport wise summarizations.The Games column should be split into 2 columns as year and season, and the resulting dataset must be used for the remaining questions.**[5]**
+
+3.In the sorting data option, the user can input values as 'top/bottom' using a radio button, age values using a slider and team (include 'All') using a drop down. Based on the user input you will sort the data and display as a plain table.**[30]**
+
+4.In sport wise summarizations, include a menu to select the sport Based on the sport selected you have to display the min, max and mean values for the age column and mode values for the Sex,Team,Games,City and Event columns selected. The columns are displayed as check box values.**[30]**
+
+5.In the EDA option, plot a boxplot for each team's age for 1988 Winter games, a bar chart showing medal tally for each tram in 2012 Summer games and a histogram of sex column.**[30]**

@@ -1,0 +1,54 @@
+---
+title: "R Evaluation"
+date: "06/16/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Time: 3 hours
+#### Max marks:100
+
+## [Trending YouTube Video Statistics](https://www.kaggle.com/datasnaek/youtube-new?select=CAvideos.csv)
+### Daily statistics for trending YouTube videos
+
+Download the data from:
+
+https://rawgit.com/Parvathy47/R-Programming/master/Exam/Q2US.csv
+
+https://rawgit.com/Parvathy47/R-Programming/master/Exam/Q2GB.csv
+
+https://rawgit.com/Parvathy47/R-Programming/master/Exam/Q2DE.csv
+
+https://rawgit.com/Parvathy47/R-Programming/master/Exam/Q2CA.csv
+
+https://rawgit.com/Parvathy47/R-Programming/master/Exam/Q2FR.csv
+
+**Context**
+
+YouTube (the world-famous video sharing website) maintains a list of the top trending videos on the platform. According to Variety magazine, “To determine the year’s top-trending videos, YouTube uses a combination of factors including measuring users interactions (number of views, shares, comments and likes). Note that they’re not the most-viewed videos overall for the calendar year”. Top performers on the YouTube trending list are music videos (such as the famously virile “Gangam Style”), celebrity and/or reality TV performances, and the random dude-with-a-camera viral videos that YouTube is well-known for.
+
+This dataset is a daily record of the top trending YouTube videos.
+
+**Content**
+
+This dataset includes several months (and counting) of data on daily trending YouTube videos. Data is included for the US, GB, DE, CA, and FR regions (USA, Great Britain, Germany, Canada, and France, respectively), with up to 200 listed trending videos per day.
+
+Each region’s data is in a separate file. Data includes the video title, channel title, publish time, tags, views, likes and dislikes, description, and comment count.
+
+The data also includes a category_id field, which varies between regions. 
+
+## Questions
+***Create an R Shiny App that contains the following features:***
+
+1.The app should have 2 tabs: Home and EDA. **[5]**
+
+2.In the home tab, you need to have 3 options: A general description of the data (available at the start of this file), sorting data  and  region wise summarizations.The data from the above links is to be merged into one dataset and used for the app. Include a new column in the merged dataset called region containing values as US, GB, DE, CA, and FR.  **[5]**
+
+3.In the sorting data option, the user can input values as 'top/bottom' using a radio button, like values using a slider and a region name (include 'All') using a drop down. Based on the user input you will sort the data and display as a plain table.**[30]**
+
+4.In region wise summarizations, include a menu to select the region. Based on the region selected you have to display the mean values for the numeric columns selected. The columns are displayed as check box values.**[30]**
+
+5.In the EDA option, plot a boxplot for each regions views and a bar plot for each region's likes and dislikes.**[30]**
