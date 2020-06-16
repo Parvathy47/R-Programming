@@ -374,40 +374,34 @@ summary {
 <div id="max-marks100" class="section level4">
 <h4>Max marks:100</h4>
 </div>
-<div id="pokemon-with-stats" class="section level2">
-<h2><a href="https://www.kaggle.com/abcsds/pokemon">Pokemon with stats</a></h2>
-<div id="pokemon-with-stats-and-types" class="section level3">
-<h3>721 Pokemon with stats and types</h3>
-<p>Download the data from:</p>
-<p><a href="https://rawgit.com/Parvathy47/R-Programming/master/Exam/D7.csv" class="uri">https://rawgit.com/Parvathy47/R-Programming/master/Exam/D7.csv</a></p>
+<div id="world-happiness-report" class="section level2">
+<h2><a href="https://www.kaggle.com/unsdsn/world-happiness?select=2015.csv">World Happiness Report</a></h2>
+<div id="happiness-scored-according-to-economic-production-social-support-etc." class="section level3">
+<h3>Happiness scored according to economic production, social support, etc.</h3>
+<p>Download the data from <a href="https://rawgit.com/Parvathy47/R-Programming/master/Exam/D1.csv" class="uri">https://rawgit.com/Parvathy47/R-Programming/master/Exam/D1.csv</a></p>
 <p><strong>Context</strong></p>
-<p>This data set includes 721 Pokemon, including their number, name, first and second type, and basic stats: HP, Attack, Defense, Special Attack, Special Defense, and Speed. It has been of great use when teaching statistics to kids. With certain types you can also give a geeky introduction to machine learning.</p>
-<p>This are the raw attributes that are used for calculating how much damage an attack will do in the games. This dataset is about the pokemon games (NOT pokemon cards or Pokemon Go).</p>
+<p>The World Happiness Report is a landmark survey of the state of global happiness. The first report was published in 2012, the second in 2013, the third in 2015, and the fourth in the 2016 Update. The World Happiness 2017, which ranks 155 countries by their happiness levels, was released at the United Nations at an event celebrating International Day of Happiness on March 20th. The report continues to gain global recognition as governments, organizations and civil society increasingly use happiness indicators to inform their policy-making decisions. Leading experts across fields – economics, psychology, survey analysis, national statistics, health, public policy and more – describe how measurements of well-being can be used effectively to assess the progress of nations. The reports review the state of happiness in the world today and show how the new science of happiness explains personal and national variations in happiness.</p>
 <p><strong>Content</strong></p>
-<p>The data as described by Myles O’Neill is:</p>
-<ul>
-<li>#: ID for each pokemon</li>
-<li>Name: Name of each pokemon</li>
-<li>Type 1: Each pokemon has a type, this determines weakness/resistance to attacks</li>
-<li>Type 2: Some pokemon are dual type and have 2</li>
-<li>Total: sum of all stats that come after this, a general guide to how strong a pokemon is</li>
-<li>HP: hit points, or health, defines how much damage a pokemon can withstand before fainting</li>
-<li>Attack: the base modifier for normal attacks (eg. Scratch, Punch)</li>
-<li>Defense: the base damage resistance against normal attacks</li>
-<li>SP Atk: special attack, the base modifier for special attacks (e.g. fire blast, bubble beam)</li>
-<li>SP Def: the base damage resistance against special attacks</li>
-<li>Speed: determines which pokemon attacks first each round</li>
-</ul>
+<p>The happiness scores and rankings use data from the Gallup World Poll. The scores are based on answers to the main life evaluation question asked in the poll. This question, known as the Cantril ladder, asks respondents to think of a ladder with the best possible life for them being a 10 and the worst possible life being a 0 and to rate their own current lives on that scale. The scores are from nationally representative samples for the years 2013-2016 and use the Gallup weights to make the estimates representative. The columns following the happiness score estimate the extent to which each of six factors – economic production, social support, life expectancy, freedom, absence of corruption, and generosity – contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors. They have no impact on the total score reported for each country, but they do explain why some countries rank higher than others.</p>
+<p><strong>Inspiration</strong></p>
+<p>What countries or regions rank the highest in overall happiness and each of the six factors contributing to happiness? How did country ranks or scores change between the 2015 and 2016 as well as the 2016 and 2017 reports? Did any country experience a significant increase or decrease in happiness?</p>
+<p><strong>What is Dystopia?</strong></p>
+<p>Dystopia is an imaginary country that has the world’s least-happy people. The purpose in establishing Dystopia is to have a benchmark against which all countries can be favorably compared (no country performs more poorly than Dystopia) in terms of each of the six key variables, thus allowing each sub-bar to be of positive width. The lowest scores observed for the six key variables, therefore, characterize Dystopia. Since life would be very unpleasant in a country with the world’s lowest incomes, lowest life expectancy, lowest generosity, most corruption, least freedom and least social support, it is referred to as “Dystopia,” in contrast to Utopia.</p>
+<p><strong>What are the residuals?</strong></p>
+<p>The residuals, or unexplained components, differ for each country, reflecting the extent to which the six variables either over- or under-explain average 2014-2016 life evaluations. These residuals have an average value of approximately zero over the whole set of countries. Figure 2.2 shows the average residual for each country when the equation in Table 2.1 is applied to average 2014- 2016 data for the six variables in that country. We combine these residuals with the estimate for life evaluations in Dystopia so that the combined bar will always have positive values. As can be seen in Figure 2.2, although some life evaluation residuals are quite large, occasionally exceeding one point on the scale from 0 to 10, they are always much smaller than the calculated value in Dystopia, where the average life is rated at 1.85 on the 0 to 10 scale.</p>
+<p><strong>What do the columns succeeding the Happiness Score(like Family, Generosity, etc.) describe?</strong></p>
+<p>The following columns: GDP per Capita, Family, Life Expectancy, Freedom, Generosity, Trust Government Corruption describe the extent to which these factors contribute in evaluating the happiness in each country. The Dystopia Residual metric actually is the Dystopia Happiness Score(1.85) + the Residual value or the unexplained value for each country as stated in the previous answer.</p>
+<p>If you add all these factors up, you get the happiness score so it might be un-reliable to model them to predict Happiness Scores.</p>
 </div>
 </div>
 <div id="questions" class="section level2">
 <h2>Questions</h2>
 <p><strong><em>Create an R Shiny App that contains the following features:</em></strong></p>
 <p>1.The app should have 2 tabs: Home and EDA. <strong>[5]</strong></p>
-<p>2.In the home tab, you need to have 4 options: A general description of the data (available at the start of this file), sorting data, type 1 wise summarizations and original table.The original table should be displayed with options to sort, filter and search through the data. <strong>[25]</strong></p>
-<p>3.In the sorting data option, the user can input values as ‘top/bottom’ using a radio button, total values using a slider and a type (include ‘All’) using a drop down. Based on the user input you will sort the data and display as a plain table.<strong>[30]</strong></p>
-<p>4.In type wise summarizations, include a menu to select the platform. Based on the platform selected you have to display the min, max and mean values for the numeric columns selected and mode values for the type and genration. The columns are displayed as check box values.<strong>[30]</strong></p>
-<p>5.In the EDA option,a histogram of type1 for only those pokemon who are not dual type.<strong>[10]</strong></p>
+<p>2.In the home tab, you need to have 3 options: A general description of the data (available at the start of this file), original table and region-wise summarizations.The original table should be displayed with options to sort, filter and search through the data. <strong>[15]</strong></p>
+<p>3.In the sorting data option, the user can input values as ‘top/bottom’ using a radio button, score values using a slider and a region name (include ‘All’) using a drop down. Based on the user input you will sort the data and display as a plain table.<strong>[30]</strong></p>
+<p>4.In region wise summarizations, include a menu to select the region. Based on the region selected you have to display the mean values for the numeric columns selected. The columns are displayed as check box values.<strong>[40]</strong></p>
+<p>5.In the EDA option, plot a pie chart of the region column<strong>[10]</strong></p>
 </div>
 
 
