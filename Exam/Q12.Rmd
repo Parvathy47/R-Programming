@@ -1,0 +1,59 @@
+---
+title: "R Evaluation"
+date: "06/16/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Time: 3 hours
+#### Max marks:100
+
+## [Novel Corona Virus 2019 Dataset
+](https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset?select=covid_19_data.csv)
+### Day level information on covid-19 affected cases
+
+Download the data from:
+
+https://rawgit.com/Parvathy47/R-Programming/master/Exam/Q12.csv
+
+**Context**
+
+From World Health Organization - On 31 December 2019, WHO was alerted to several cases of pneumonia in Wuhan City, Hubei Province of China. The virus did not match any other known virus. This raised concern because when a virus is new, we do not know how it affects people.
+
+So daily level information on the affected people can give some interesting insights when it is made available to the broader data science community.
+
+Johns Hopkins University has made an excellent dashboard using the affected cases data. Data is extracted from the google sheets associated and made available here.
+
+
+**Content**
+2019 Novel Coronavirus (2019-nCoV) is a virus (more specifically, a coronavirus) identified as the cause of an outbreak of respiratory illness first detected in Wuhan, China. Early on, many of the patients in the outbreak in Wuhan, China reportedly had some link to a large seafood and animal market, suggesting animal-to-person spread. However, a growing number of patients reportedly have not had exposure to animal markets, indicating person-to-person spread is occurring. At this time, it’s unclear how easily or sustainably this virus is spreading between people - CDC
+
+This dataset has daily level information on the number of affected cases, deaths and recovery from 2019 novel coronavirus. Please note that this is a time series data and so the number of cases on any given day is the cumulative number.
+
+The data is available from 22 Jan, 2020.
+Main file in this dataset is covid_19_data.csv and the detailed descriptions are below.
+
+* Sno - Serial number
+* ObservationDate - Date of the observation in MM/DD/YYYY
+* Province/State - Province or state of the observation (Could be empty when missing)
+* Country/Region - Country of observation
+* Last Update - Time in UTC at which the row is updated for the given province or country.
+* Confirmed - Cumulative number of confirmed cases till that date
+* Deaths - Cumulative number of of deaths till that date
+* Recovered - Cumulative number of recovered cases till that date
+
+## Questions
+***Create an R Shiny App that contains the following features:***
+
+1.The app should have 2 tabs: Home and EDA. **[5]**
+
+2.In the home tab, you need to have 3 options: A general description of the data (available at the start of this file), sorting data and  country wise summarizations.**[5]**
+
+3.In the sorting data option, the user can input values as 'top/bottom' using a radio button, confirmed values using a slider and country (include 'All') using a drop down. Based on the user input you will sort the data and display as a plain table.**[30]**
+
+4.In country wise summarizations, include a menu to select the country. Based on the country selected you have to display the min, max and mean values for the numeric columns selected and mode values for the province column. The columns are displayed as check box values.**[30]**
+
+5.In the EDA option, plot a world geoplot with gradient based on the number of confirmed cases and a month wise bar chart of confirmed, death and recovered case in US .**[30]**
